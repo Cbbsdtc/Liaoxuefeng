@@ -1,0 +1,20 @@
+import os
+print(os.name) #操作系统类型
+
+#操作系统中定义的环境变量
+print(os.environ)
+
+#和获取某个环境变量的值 调用os.environ.get('key')
+print(os.environ.get('path'))
+
+#查看当前目录的绝对路径
+a = os.path.abspath('.')
+#在某个目录下创建一个新目录，首先把新目录的完整路径表示出来
+#把两个路径合成一个时，不要直接拼字符串，而要通过os.path.join()函数
+b = os.path.join(a, 'test')
+print(b)
+#os.path.mkdir()
+#os.path.rmdir()
+
+#同样的道理，要拆分路径时，也不要直接去拆字符串，而要通过os.path.split()函数
+os.path.split('C:\Python Programs\Liaoxuefeng\十.IO编程\test')
